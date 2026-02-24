@@ -1,0 +1,20 @@
+# Keep your highlight selection
+select highlight, resi 154+194+154
+
+# Show rounder atoms (small spheres over sticks)
+show sticks, highlight
+show spheres, highlight
+set sphere_scale, 0.3, highlight   # Adjust 0.35–0.55 depending on taste
+
+# Make the sticks smoother & more refined
+set stick_quality, 16, highlight
+set stick_radius, 0.35, highlight
+
+# Fade the rest (as before)
+set cartoon_transparency, 0.8, (not highlight)
+set cartoon_transparency, 0.0, highlight
+
+# Enable outline effect for final rendering
+set ray_trace_mode, 1        # Black edge outline
+set ray_trace_gain, 0.1      # Subtle outline (increase to 0.2 if you want stronger)
+set antialias, 2             # Smooths edges when ray tracing
